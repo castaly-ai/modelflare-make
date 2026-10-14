@@ -1,0 +1,11 @@
+[
+  {
+    "name": "model",
+    "type": "select",
+    "label": "Model",
+    "required": true,
+    "options": "rpc://listModels",
+    "help": "Models your key can call. Pick a text model."
+  },
+  { "name": "prompt", "type": "text", "label": "Prompt", "required": true }
+]

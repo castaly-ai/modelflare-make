@@ -1,0 +1,19 @@
+[
+  {
+    "name": "model",
+    "type": "select",
+    "label": "Model",
+    "required": true,
+    "options": "rpc://listModels",
+    "help": "Pick an OpenAI-compatible image model (GPT Image, Wan, Seedream). Gemini image models use a different endpoint."
+  },
+  { "name": "prompt", "type": "text", "label": "Prompt", "required": true },
+  {
+    "name": "size",
+    "type": "text",
+    "label": "Size",
+    "required": true,
+    "default": "1024x1024",
+    "help": "Allowed sizes depend on the model; see its page at https://docs.modelflare.dev/models/image/."
+  }
+]

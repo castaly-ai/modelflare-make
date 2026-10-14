@@ -1,0 +1,15 @@
+{
+  "url": "/images/generations",
+  "method": "POST",
+  "body": {
+    "model": "{{parameters.model}}",
+    "prompt": "{{parameters.prompt}}",
+    "size": "{{parameters.size}}"
+  },
+  "response": {
+    "output": {
+      "url": "{{body.data[1].url}}",
+      "b64_json": "{{body.data[1].b64_json}}"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "name": "model",
+    "type": "select",
+    "label": "Model",
+    "required": true,
+    "options": "rpc://listModels",
+    "help": "Pick a video model. Other request fields are on its page at https://docs.modelflare.dev/models/video/."
+  },
+  { "name": "prompt", "type": "text", "label": "Prompt", "required": true }
+]

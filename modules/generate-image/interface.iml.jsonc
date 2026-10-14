@@ -1,0 +1,4 @@
+[
+  { "name": "url", "type": "url", "label": "Image URL (expires; save it soon)" },
+  { "name": "b64_json", "type": "text", "label": "Image (Base64)" }
+]

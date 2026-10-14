@@ -1,0 +1,17 @@
+{
+  "url": "/chat/completions",
+  "method": "POST",
+  "body": {
+    "model": "{{parameters.model}}",
+    "messages": [
+      { "role": "user", "content": "{{parameters.prompt}}" }
+    ]
+  },
+  "response": {
+    "output": {
+      "content": "{{body.choices[1].message.content}}",
+      "model": "{{body.model}}",
+      "usage": "{{body.usage}}"
+    }
+  }
+}

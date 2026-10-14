@@ -1,0 +1,12 @@
+{
+  "url": "/videos/{{encodeURL(parameters.taskId)}}",
+  "method": "GET",
+  "response": {
+    "output": {
+      "id": "{{ifempty(body.id; parameters.taskId)}}",
+      "status": "{{body.status}}",
+      "progress": "{{body.progress}}",
+      "error": "{{body.error.message}}"
+    }
+  }
+}

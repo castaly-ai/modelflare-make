@@ -1,0 +1,20 @@
+[
+  {
+    "name": "apiKey",
+    "type": "password",
+    "label": "Smart API Key",
+    "required": true,
+    "help": "Recommended: one Smart API Key calls every model available to your account. Create one at https://modelflare.dev/keys. No account yet: https://modelflare.dev/sign-up?utm_source=make&utm_medium=plugin&utm_campaign=integrations"
+  },
+  {
+    "name": "baseUrl",
+    "type": "select",
+    "label": "Base URL",
+    "required": true,
+    "default": "https://modelflare.dev/v1",
+    "options": [
+      { "label": "Global (https://modelflare.dev/v1)", "value": "https://modelflare.dev/v1" },
+      { "label": "China (https://origin.modelflare.dev/v1)", "value": "https://origin.modelflare.dev/v1" }
+    ]
+  }
+]

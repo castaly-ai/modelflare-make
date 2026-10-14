@@ -1,0 +1,14 @@
+{
+  "url": "/videos",
+  "method": "POST",
+  "body": {
+    "model": "{{parameters.model}}",
+    "prompt": "{{parameters.prompt}}"
+  },
+  "response": {
+    "output": {
+      "id": "{{ifempty(body.id; body.task_id)}}",
+      "status": "{{body.status}}"
+    }
+  }
+}

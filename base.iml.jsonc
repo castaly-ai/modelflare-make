@@ -1,0 +1,16 @@
+{
+  "baseUrl": "{{connection.baseUrl}}",
+  "headers": {
+    "Authorization": "Bearer {{connection.apiKey}}",
+    "X-Modelflare-Skill": "modelflare-make/0.1.0"
+  },
+  "response": {
+    "error": {
+      "message": "[{{statusCode}}] {{ifempty(body.error.message; 'Modelflare request failed')}} (code: {{ifempty(body.error.code; 'unknown')}}). A regular key only calls its own group; a Smart API Key calls every model available to your account: https://modelflare.dev/keys",
+      "type": "RuntimeError"
+    }
+  },
+  "log": {
+    "sanitize": ["request.headers.authorization"]
+  }
+}

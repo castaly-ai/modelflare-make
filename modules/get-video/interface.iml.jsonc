@@ -1,0 +1,6 @@
+[
+  { "name": "id", "type": "text", "label": "Task ID" },
+  { "name": "status", "type": "text", "label": "Status" },
+  { "name": "progress", "type": "number", "label": "Progress" },
+  { "name": "error", "type": "text", "label": "Error" }
+]

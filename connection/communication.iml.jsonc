@@ -1,0 +1,17 @@
+{
+  "url": "{{parameters.baseUrl}}/models",
+  "method": "GET",
+  "headers": {
+    "Authorization": "Bearer {{parameters.apiKey}}",
+    "X-Modelflare-Skill": "modelflare-make/0.1.0"
+  },
+  "response": {
+    "error": {
+      "message": "[{{statusCode}}] {{ifempty(body.error.message; 'The key was rejected')}}",
+      "type": "InvalidAccessTokenError"
+    }
+  },
+  "log": {
+    "sanitize": ["request.headers.authorization"]
+  }
+}

@@ -1,0 +1,14 @@
+[
+  { "name": "content", "type": "text", "label": "Content" },
+  { "name": "model", "type": "text", "label": "Model" },
+  {
+    "name": "usage",
+    "type": "collection",
+    "label": "Usage",
+    "spec": [
+      { "name": "prompt_tokens", "type": "number", "label": "Prompt tokens" },
+      { "name": "completion_tokens", "type": "number", "label": "Completion tokens" },
+      { "name": "total_tokens", "type": "number", "label": "Total tokens" }
+    ]
+  }
+]
