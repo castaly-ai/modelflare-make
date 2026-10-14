@@ -19,7 +19,13 @@ These files are the source of the Make app's components, in IML JSON:
 | Module `generateImage` (action) | `modules/generate-image/*` — OpenAI-compatible image models |
 | Module `createVideo` / `getVideo` (actions) | `modules/create-video/*`, `modules/get-video/*` — start a video task and check it |
 
-To build the app, create a custom app in Make (or a Make Apps Editor local workspace), add the components with the names above, and paste each file into the matching block (Communication, Mappable parameters, Interface). Publishing the app generates the invite link; request Make's review to list it publicly.
+`deploy.mjs` creates or updates the app through Make's SDK Apps API and uploads every component above, the icon and this README:
+
+```bash
+MAKE_API_TOKEN=... MAKE_ZONE=us2.make.com node deploy.mjs
+```
+
+The token needs the `sdk-apps:read` and `sdk-apps:write` scopes. The app name Make assigned on first creation is kept in `make-app.json`, so later runs update the same app. Making the app public (required for the invite link and for Make's review) is a one-way step in Make.
 
 Each model's request fields are on its page at https://docs.modelflare.dev/models/. Gemini image models use `generateContent` and are not covered by the image module.
 
