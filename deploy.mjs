@@ -86,7 +86,9 @@ if (!connection) {
 await call('PUT', `/sdk/apps/connections/${connection}/api`, { body: await iml('connection/communication.iml.jsonc'), contentType: 'application/jsonc' })
 await call('PUT', `/sdk/apps/connections/${connection}/parameters`, { body: await iml('connection/parameters.iml.jsonc'), contentType: 'application/jsonc' })
 
-const rpcs = (await call('GET', `${appPath}/rpcs`)).rpcs ?? []
+// The API returns appRpcs although the reference documents rpcs.
+const rpcList = await call('GET', `${appPath}/rpcs`)
+const rpcs = rpcList.appRpcs ?? rpcList.rpcs ?? []
 if (!rpcs.some((rpc) => rpc.name === 'listModels')) {
   await call('POST', `${appPath}/rpcs`, { body: { name: 'listModels', label: 'List models', connection } })
 }
